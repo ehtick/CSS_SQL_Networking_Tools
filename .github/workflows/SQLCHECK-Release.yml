@@ -1,11 +1,13 @@
 name: Build SQLCHECK
 # manually triggered workflow
-on: [workflow_dispatch]
+on:
+    push:
+        branches: [main]
 env:
     SOLUTION_FILE_PATH: .\SQLCHECK
     BUILD_CONFIGURATION: Release
 jobs:
-    job1:
+    build:
       runs-on: windows-latest
       steps:
       - name: Checkout
