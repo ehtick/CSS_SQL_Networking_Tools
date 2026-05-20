@@ -3,6 +3,8 @@ name: Build SQLCHECK
 on:
     push:
         branches: [main]
+    workflow_dispatch:
+      
 env:
     SOLUTION_FILE_PATH: SQLCHECK.sln
     BUILD_CONFIGURATION: Release
